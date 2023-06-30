@@ -4,6 +4,6 @@ import { DonutController } from './donut.controller';
 
 @Module({
   controllers: [DonutController],
-  providers: [DonutService]
+  providers: [DonutService],
 })
 export class DonutModule {}
