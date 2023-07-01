@@ -27,16 +27,16 @@ export class DonutController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.donutService.findOne(+id);
+    return this.donutService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateDonutDto: UpdateDonutDto) {
-    return this.donutService.update(+id, updateDonutDto);
+    return this.donutService.update(id, updateDonutDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.donutService.remove(+id);
+    return this.donutService.remove(id);
   }
 }

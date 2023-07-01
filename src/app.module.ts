@@ -8,6 +8,7 @@ import { DonutModule } from './donut/donut.module';
 
 @Module({
   imports: [
+    DonutModule,
     ConfigModule.forRoot({
       validationSchema: Joi.object({
         POSTGRES_HOST: Joi.string().required(),
@@ -19,7 +20,6 @@ import { DonutModule } from './donut/donut.module';
       }),
     }),
     DatabaseModule,
-    DonutModule,
   ],
   controllers: [AppController],
 })
